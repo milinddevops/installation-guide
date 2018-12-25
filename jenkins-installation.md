@@ -32,9 +32,11 @@ Now that Jenkins and its dependencies are in place, we'll start the Jenkins serv
 Using systemctl we'll start Jenkins:
 
 *sudo systemctl start jenkins*
+
 Since systemctl doesn't display output, we'll use its status command to verify that it started successfully:
 
 *sudo systemctl status jenkins*
+
 If everything went well, the beginning of the output should show that the service is active and configured to start at boot:
 
 Output
