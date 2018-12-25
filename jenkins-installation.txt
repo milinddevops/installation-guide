@@ -1,9 +1,9 @@
-Introduction
+# Introduction
 Jenkins is an open source automation server intended to automate repetitive technical tasks involved in the continuous integration and delivery of software. Jenkins is Java-based and can be installed from Ubuntu packages or by downloading and running its Web application ARchive (WAR) file — a collection of files that make up a complete web application which is intended to be run on a server.
 
 In this tutorial we will install Jenkins by adding its Debian package repository, then using that repository to install the package using apt-get.
 
-Prerequisites
+# Prerequisites
 
 To follow this tutorial, you will need:
 
@@ -11,7 +11,7 @@ One Ubuntu 16.04 server configured with a non-root sudo user and a firewall by f
 
 When the server is set up, you're ready to follow along.
 
-Step 1 — Installing Jenkins
+# Step 1 — Installing Jenkins
 The version of Jenkins included with the default Ubuntu packages is often behind the latest available version from the project itself. In order to take advantage of the latest fixes and features, we'll use the project-maintained packages to install Jenkins.
 
 First, we'll add the repository key to the system.
@@ -28,7 +28,7 @@ Finally, we'll install Jenkins and its dependencies, including Java:
 sudo apt-get install jenkins
 Now that Jenkins and its dependencies are in place, we'll start the Jenkins server.
 
-Step 2 — Starting Jenkins
+# Step 2 — Starting Jenkins
 Using systemctl we'll start Jenkins:
 
 sudo systemctl start jenkins
@@ -44,7 +44,7 @@ Output
     Docs: man:systemd-sysv-generator(8)
 Now that Jenkins is running, we'll adjust our firewall rules so that we can reach Jenkins from a web browser to complete the initial set up.
 
-Step 3 — Opening the Firewall
+# Step 3 — Opening the Firewall
 By default, Jenkins runs on port 8080, so we'll open that port using ufw:
 
 sudo ufw allow 8080
@@ -68,7 +68,7 @@ sudo ufw allow OpenSSH
 sudo ufw enable
 Now that Jenkins is installed and the firewall allows us to access it, we can complete the initial setup.
 
-Step 4 — Setting up Jenkins
+# Step 4 — Setting up Jenkins
 To set up our installation, we'll visit Jenkins on its default port, 8080, using the server domain name or IP address: http://ip_address_or_domain_name:8080
 
 We should see "Unlock Jenkins" screen, which displays the location of the initial password
